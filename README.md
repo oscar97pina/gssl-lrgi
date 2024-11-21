@@ -6,8 +6,6 @@ End-to-end training of graph neural networks (GNN) on large graphs presents seve
 
 ## Installation
 
-## Installation
-
 1. Create a Virtual environment
 ```bash
 python3 -m venv myenv
