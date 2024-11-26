@@ -144,6 +144,11 @@ def run(args):
 
     wandb.log({"val_f": val_f, "test_f": test_f, "layer": args.num_layers, "epoch": args.epochs+1})
 
+    # save model
+    if args.results_dir is not None:
+        name=f"{args.project}-{args.experiment}-{args.dataset}-{args.method}-{args.num_layers}x{args.emb_size}"
+        save_ckpt(args.results_dir, encoder.state_dict(), name=name)
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run inductive experiments')
     parser.add_argument("--project", type=str,  default="gssl_test")
