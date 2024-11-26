@@ -172,3 +172,6 @@ wandb/
 augment/
 run_inductive_augment.py
 run_multigraph_augment.py
+
+# data
+data/
